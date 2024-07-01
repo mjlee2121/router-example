@@ -1,9 +1,9 @@
 import './App.css';
 import Homepage from './page/Homepage';
-import Aboutpage from './page/Aboutpage';
-import ProductPage from './page/ProductPage'
-import ProductDetailPage from './page/ProductPage'
-
+import AboutPage from './page/AboutPage';
+import MoreAboutPage from './page/MoreAboutPage';
+import ProductPage from './page/ProductPage';
+import ProductDetailPage from './page/ProductDetailPage';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -11,9 +11,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Homepage />}/>
-        <Route path='/about' element={<Aboutpage />} />
-        <Route path='/products' element={<ProductPage />}/>
-        <Route path='/products/:id' element={<ProductDetailPage />}/>
+        <Route path='/products' element={<ProductPage />} />
+        <Route path='/products/:id' element={<ProductDetailPage />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/about/:id' element={< MoreAboutPage/>} />
       </Routes>
 
     </div>
